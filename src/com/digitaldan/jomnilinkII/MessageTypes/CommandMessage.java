@@ -126,7 +126,7 @@ Command             Parameter 1     Parameter 2         Description
 		else {
 			if (unitNo > 0x7f)
 				throw new IllegalArgumentException("Unit out of range");
-			return new CommandMessage(CMD_UNIT_LO9_LEVEL_HIGH7, time, levelPerc | (unitNo << 9 ));
+			return new CommandMessage(CMD_UNIT_LO9_LEVEL_HIGH7, time, (levelPerc <<9)| unitNo);
 		}
 	}
 /*
